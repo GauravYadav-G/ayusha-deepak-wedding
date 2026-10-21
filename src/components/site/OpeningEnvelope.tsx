@@ -28,6 +28,7 @@ export default function OpeningEnvelope() {
   }, [phase]);
 
   const openInvitation = () => {
+    window.dispatchEvent(new CustomEvent("wedding:play-music"));
     if (started.current) return;
     started.current = true;
     const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;

@@ -12,7 +12,7 @@ export default function Footer() {
       />
 
       <div className="relative mx-auto flex max-w-4xl flex-col items-center px-5 text-center md:px-8">
-        <p className="font-hindi text-4xl text-gold-2 md:text-5xl">सीता राम</p>
+        <p className="font-hindi text-4xl text-gold-2 md:text-5xl">सिया राम</p>
 
         <p className="mt-6 flex flex-wrap items-center justify-center gap-3 font-display text-3xl font-semibold italic md:text-4xl">
           {wedding.groom.name}
@@ -35,7 +35,7 @@ export default function Footer() {
           Your presence is our most beautiful gift
         </p>
         <p className="mt-2 font-hindi text-sm text-gold-2/80">
-          ॥ जय सीता राम ॥
+          ॥ जय सिया राम ॥
         </p>
       </div>
     </footer>
