@@ -35,9 +35,9 @@ export const wedding = {
   venues: [
     {
       id: "home", label: "Haldi · Mehndi · Sangeet", name: "Our Home",
-      address: "C-66, GR Garden Phase 2, Greater Noida West, Uttar Pradesh 201318",
-      mapQuery: "28.6164458,77.4541243",
-      mapUrl: "https://www.google.com/maps/place/Deep+Jyoti+construction/@28.6164505,77.4515494,954m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390cef0039d25c57:0x243e607887123d4a!8m2!3d28.6164458!4d77.4541243!16s%2Fg%2F11y4b2wfyn",
+      address: "D-496, Sector 11, Pratap Vihar, Near Golden Public School, Ghaziabad, Uttar Pradesh",
+      mapQuery: "D-496, Sector 11, Pratap Vihar, Near Golden Public School, Ghaziabad, Uttar Pradesh",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=D+496+Pratap+Vihar+Sector+11+Ghaziabad+Near+Golden+Public+School",
     },
     {
       id: "amaatra", label: "Wedding", name: "Amaatra Banquet Gaur City",
