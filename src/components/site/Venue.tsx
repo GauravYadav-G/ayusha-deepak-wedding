@@ -17,7 +17,7 @@ export default function Venue() {
     </div>
     <div className="story-venue-grid">{[...wedding.venues].reverse().map(venue => <article className="story-venue-card" key={venue.id} data-story="">
       <span className="eyebrow">{venue.id === "amaatra" ? "09 December · The wedding" : "08 December · Haldi, Mehndi & Sangeet"}</span><MapPin size={25} strokeWidth={1.2} className="venue-pin" aria-hidden="true" /><h3>{venue.name}</h3><p>{venue.address}</p>
-      <div className="venue-actions"><a className="premium-button" href={venue.mapUrl} target="_blank" rel="noreferrer">Get directions <ArrowUpRight size={15} /></a><button type="button" onClick={() => copy(venue.id,venue.address)} aria-label={`Copy address for ${venue.name}`}>{copied === venue.id ? <Check size={17} /> : <Copy size={17} />}</button></div>
+      <div className="venue-actions"><a className="premium-button" href={venue.mapUrl} target="_blank" rel="noreferrer">Get directions <ArrowUpRight size={15} /></a><button type="button" onClick={() => copy(venue.id, venue.address)} aria-label={`Copy address for ${venue.name}`}>{copied === venue.id ? <Check size={17} /> : <Copy size={17} />}</button></div>
       <button type="button" className="map-toggle" aria-expanded={map === venue.id} onClick={() => setMap(map === venue.id ? null : venue.id)}>{map === venue.id ? "Close map" : "Explore the location"} <span aria-hidden="true">{map === venue.id ? "−" : "+"}</span></button>
       {map === venue.id && <iframe title={`Map to ${venue.name}`} src={`https://www.google.com/maps?q=${encodeURIComponent(venue.mapQuery)}&z=15&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />}
     </article>)}</div>
