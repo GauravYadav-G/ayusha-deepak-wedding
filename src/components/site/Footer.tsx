@@ -25,7 +25,7 @@ export default function Footer() {
           09 · 12 · 2026 — {wedding.city}
         </p>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-5">{wedding.contacts.map(phone => <a key={phone} href={`tel:+91${phone}`} className="text-sm text-cream underline underline-offset-4">+91 {phone}</a>)}</div>
+        <div className="mt-6 flex flex-wrap justify-center gap-5">{wedding.contacts.map(phone => <a key={phone} href={`tel:+91${phone.replace(/\D/g, "")}`} className="text-sm text-cream underline underline-offset-4">+91 {phone}</a>)}</div>
 
 
 

@@ -21,6 +21,6 @@ export default function Venue() {
       <button type="button" className="map-toggle" aria-expanded={map === venue.id} onClick={() => setMap(map === venue.id ? null : venue.id)}>{map === venue.id ? "Close map" : "Explore the location"} <span aria-hidden="true">{map === venue.id ? "−" : "+"}</span></button>
       {map === venue.id && <iframe title={`Map to ${venue.name}`} src={`https://www.google.com/maps?q=${encodeURIComponent(venue.mapQuery)}&z=15&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />}
     </article>)}</div>
-    <div className="venue-help"><p>A little help finding your way?</p>{wedding.contacts.map(phone => <a key={phone} href={`tel:+91${phone}`}><Phone size={13} /> +91 {phone}</a>)}</div>
+    <div className="venue-help"><p>A little help finding your way?</p>{wedding.contacts.map(phone => <a key={phone} href={`tel:+91${phone.replace(/\D/g, "")}`}><Phone size={13} /> +91 {phone}</a>)}</div>
   </section>;
 }

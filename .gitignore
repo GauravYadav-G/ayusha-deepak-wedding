@@ -42,3 +42,4 @@ yarn-error.log*
 /public/video/Generate_an_*.mp4
 /public/video/now_generat_for_portnait.mp4
 /public/video/mandap-*-poster.webp
+.env*

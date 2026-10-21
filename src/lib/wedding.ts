@@ -31,7 +31,7 @@ export const wedding = {
   dateLabel: "Wednesday, 9th December 2026",
   countdownTarget: "2026-12-09T00:00:00+05:30",
   hashtag: "#AyushaWedsDeepak",
-  contacts: ["8585947016", "9871207859"],
+  contacts: ["8178-376675"],
   venues: [
     {
       id: "home", label: "Haldi · Mehndi · Sangeet", name: "Our Home",
