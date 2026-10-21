@@ -6,18 +6,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
-  title: "Deepak & Ayusha | Shubh Vivah — 9 December 2026, Greater Noida West",
+  title: "Ayusha & Deepak | Shubh Vivah — 9 December 2026, Greater Noida West",
   description:
-    "Deepak weds Ayusha — a divine celebration in Greater Noida West. Celebrations on 8th and 9th December 2026. Browse the schedule, venues and share your blessings.",
+    "Ayusha weds Deepak — a divine celebration in Greater Noida West. Celebrations on 8th and 9th December 2026. Browse the schedule, venues and share your blessings.",
   keywords: [
     "wedding invitation",
-    "Deepak weds Ayusha",
+    "Ayusha weds Deepak",
     "Shubh Vivah",
     "Greater Noida wedding",
     "Indian wedding website",
   ],
   openGraph: {
-    title: "Deepak & Ayusha | Shubh Vivah",
+    title: "Ayusha & Deepak | Shubh Vivah",
     description:
       "A divine celebration at Greater Noida West — 9th December 2026. Share your blessing.",
     images: ["/images/ayusha-deepak-3.jpg"],

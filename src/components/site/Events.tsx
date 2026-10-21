@@ -9,7 +9,7 @@ export default function Events() {
     </div>
     <div className="celebrations-content">
       <PeacockDance />
-      <header className="premium-heading" data-story=""><span className="eyebrow">08 — 09 December 2026 · Greater Noida West</span><p className="script-accent">Our home fills with joy</p><h2 id="celebrations-title">First, the celebrations.</h2><p>On 8 December, join Deepak’s family at home for haldi, mehndi and sangeet.<br />The next day, gather with us as Deepak and Ayusha begin their married life.</p></header>
+      <header className="premium-heading" data-story=""><span className="eyebrow">08 — 09 December 2026 · Greater Noida West</span><p className="script-accent">Our home fills with joy</p><h2 id="celebrations-title">First, the celebrations.</h2><p>On 8 December, join Ayusha’s family at home for haldi, mehndi and sangeet.<br />The next day, gather with us as Ayusha and Deepak begin their married life.</p></header>
       <div className="celebration-grid">{wedding.events.map((event, index) => {
         const Icon = icons[index]; const venue = getVenue(event.venueId);
         return <article data-story="" className={`celebration-card ${index === 3 ? "celebration-card-wedding" : ""}`} key={event.id}>

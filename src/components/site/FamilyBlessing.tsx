@@ -7,7 +7,7 @@ export default function FamilyBlessing() {
         <source media="(max-width: 700px)" srcSet="/artwork/family-blessings-mobile.webp" />
         <img
           src="/artwork/family-blessings-desktop.webp"
-          alt="Deepak and Ayusha receive their families’ blessings beside the sacred wedding fire"
+          alt="Ayusha and Deepak receive their families’ blessings beside the sacred wedding fire"
           loading="lazy"
           decoding="async"
         />

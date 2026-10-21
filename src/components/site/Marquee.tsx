@@ -3,7 +3,7 @@ import { wedding } from "@/lib/wedding";
 
 const ITEMS = [
   "शुभ विवाह",
-  "Deepak weds Ayusha",
+  "Ayusha weds Deepak",
   "Save the Date",
   "09 · 12 · 2026",
   "Greater Noida West, Uttar Pradesh",

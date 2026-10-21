@@ -41,24 +41,24 @@ export default function Invitation() {
             </p>
 
             <p className="mx-auto mt-6 max-w-md font-display text-xl leading-relaxed text-ink md:text-2xl">
-              {wedding.groom.sonOf} request the honour of your gracious
-              presence at the wedding of their beloved son
+              {wedding.bride.daughterOf} request the honour of your gracious
+              presence at the wedding of their beloved daughter
             </p>
 
             <p className="gold-text mt-5 font-display text-6xl font-semibold italic md:text-7xl">
-              {wedding.groom.name}
-            </p>
-
-            <p className="mt-4 font-display text-lg text-ink/70 italic md:text-xl">
-              with his soulmate
-            </p>
-
-            <p className="gold-text mt-3 font-display text-6xl font-semibold italic md:text-7xl">
               {wedding.bride.name}
             </p>
 
+            <p className="mt-4 font-display text-lg text-ink/70 italic md:text-xl">
+              with her soulmate
+            </p>
+
+            <p className="gold-text mt-3 font-display text-6xl font-semibold italic md:text-7xl">
+              {wedding.groom.name}
+            </p>
+
             <p className="mt-5 font-display text-lg text-ink/80 italic md:text-xl">
-              daughter of {wedding.bride.daughterOf}
+              son of {wedding.groom.sonOf}
             </p>
 
             {/* arch photo */}
@@ -66,7 +66,7 @@ export default function Invitation() {
               <div className="frame-double arch-top relative aspect-[3/4] overflow-hidden rounded-[999px_999px_18px_18px] border-gold/60">
                 <Image
                   src="/images/couple-candid.jpg"
-                  alt={`${wedding.groom.fullName} and ${wedding.bride.fullName} laughing together at golden hour`}
+                  alt={`${wedding.bride.fullName} and ${wedding.groom.fullName} laughing together at golden hour`}
                   fill
                   sizes="(min-width: 768px) 288px, 256px"
                   className="object-cover"

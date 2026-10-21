@@ -15,9 +15,9 @@ export default function Footer() {
         <p className="font-hindi text-4xl text-gold-2 md:text-5xl">सिया राम</p>
 
         <p className="mt-6 flex flex-wrap items-center justify-center gap-3 font-display text-3xl font-semibold italic md:text-4xl">
-          {wedding.groom.name}
-          <Heart className="h-5 w-5 fill-saffron text-saffron" aria-hidden />
           {wedding.bride.name}
+          <Heart className="h-5 w-5 fill-saffron text-saffron" aria-hidden />
+          {wedding.groom.name}
         </p>
 
         <p className="mt-3 flex items-center gap-2 font-body text-sm tracking-[0.2em] text-cream/60 uppercase">

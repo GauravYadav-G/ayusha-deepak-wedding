@@ -68,7 +68,7 @@ export default function Wishes() {
             Send Your Blessings
           </h2>
           <p className="mt-3 font-body text-sm md:text-base text-ink/70 max-w-lg mx-auto">
-            Your heartfelt prayers and warm wishes will be delivered directly to Deepak &amp; Ayusha.
+            Your heartfelt prayers and warm wishes will be delivered directly to Ayusha &amp; Deepak.
           </p>
         </header>
 
@@ -83,11 +83,11 @@ export default function Wishes() {
                   Thank You for Your Blessing!
                 </h3>
                 <p className="mt-3 font-body text-sm md:text-base leading-relaxed text-ink/75 max-w-md mx-auto">
-                  Your heartfelt blessing has been received and emailed with love directly to Deepak &amp; Ayusha.
+                  Your heartfelt blessing has been received and emailed with love directly to Ayusha &amp; Deepak.
                 </p>
                 <div className="mt-7 flex items-center justify-center gap-2 font-display text-sm text-saffron-2">
                   <Heart className="h-4 w-4 fill-saffron text-saffron" />
-                  <span>Deepak &amp; Ayusha treasure your love</span>
+                  <span>Ayusha &amp; Deepak treasure your love</span>
                 </div>
                 <button
                   type="button"
@@ -174,7 +174,7 @@ export default function Wishes() {
 
                 <p className="mt-1 flex items-center justify-center gap-1.5 text-center font-body text-xs text-ink/50">
                   <Heart className="h-3.5 w-3.5 fill-saffron text-saffron" aria-hidden />
-                  Delivered straight to Deepak &amp; Ayusha
+                  Delivered straight to Ayusha &amp; Deepak
                 </p>
               </form>
             )}

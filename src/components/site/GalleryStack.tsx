@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Expand, Pause, Play, X } from "lucide-react";
 import { Mandala } from "./Ornaments";
 const photos = [
-  { src: "/images/ayusha-deepak-1.webp", alt: "Deepak and Ayusha smiling at each other", title: "It begins with us.", caption: "A glance, a smile, and a new chapter waiting to unfold." },
-  { src: "/images/ayusha-deepak-2.webp", alt: "Deepak and Ayusha dancing together", title: "A little dance. A lot of joy.", caption: "The kind of happiness we can’t wait to share with you." },
-  { src: "/images/ayusha-deepak-4.webp", alt: "Deepak and Ayusha standing together in the light", title: "In every little moment.", caption: "Together is where the next chapter begins." },
-  { src: "/images/ayusha-deepak-3.webp", alt: "Deepak and Ayusha’s celebration portrait", title: "And now, our forever.", caption: "With our families’ blessings, and you by our side." },
+  { src: "/images/ayusha-deepak-1.webp", alt: "Ayusha and Deepak smiling at each other", title: "It begins with us.", caption: "A glance, a smile, and a new chapter waiting to unfold." },
+  { src: "/images/ayusha-deepak-2.webp", alt: "Ayusha and Deepak dancing together", title: "A little dance. A lot of joy.", caption: "The kind of happiness we can’t wait to share with you." },
+  { src: "/images/ayusha-deepak-4.webp", alt: "Ayusha and Deepak standing together in the light", title: "In every little moment.", caption: "Together is where the next chapter begins." },
+  { src: "/images/ayusha-deepak-3.webp", alt: "Ayusha and Deepak’s celebration portrait", title: "And now, our forever.", caption: "With our families’ blessings, and you by our side." },
 ];
 export default function GalleryStack() {
   const root = useRef<HTMLElement>(null);
@@ -36,11 +36,11 @@ export default function GalleryStack() {
   const open = () => { setAutoPlay(false); dialog.current?.showModal(); };
   return <section id="gallery" ref={root} className="memory-story" aria-labelledby="gallery-title">
     <div className="memory-canopy" aria-hidden="true"><img src="/artwork/b4f038c348f07bc0.webp" alt="" loading="lazy" /></div>
-    <header className="premium-heading" data-story=""><span className="eyebrow">A note from Deepak</span><p className="script-accent">A new chapter, with Ayusha</p><h2 id="gallery-title">Some moments<br />deserve to last forever.</h2><p>As Ayusha and I begin this new chapter, I look forward to celebrating it with the people who mean the most to us. These little moments are only the beginning.</p></header>
-    <div className="memory-stage" aria-roledescription="carousel" aria-label="Deepak and Ayusha’s photographs" onTouchStart={event => { touchX.current = event.touches[0].clientX; }} onTouchEnd={event => { if(touchX.current !== null) { const delta=event.changedTouches[0].clientX-touchX.current; if(Math.abs(delta)>45) move(delta<0?1:-1); touchX.current=null; } }}>
+    <header className="premium-heading" data-story=""><span className="eyebrow">A note from Ayusha</span><p className="script-accent">A new chapter, with Deepak</p><h2 id="gallery-title">Some moments<br />deserve to last forever.</h2><p>As Deepak and I begin this new chapter, I look forward to celebrating it with the people who mean the most to us. These little moments are only the beginning.</p></header>
+    <div className="memory-stage" aria-roledescription="carousel" aria-label="Ayusha and Deepak’s photographs" onTouchStart={event => { touchX.current = event.touches[0].clientX; }} onTouchEnd={event => { if(touchX.current !== null) { const delta=event.changedTouches[0].clientX-touchX.current; if(Math.abs(delta)>45) move(delta<0?1:-1); touchX.current=null; } }}>
       <Mandala className="memory-halo" aria-hidden="true" />
       {photos.map((photo, index) => { const offset=(index-active+photos.length)%photos.length; const position=offset===3?-1:offset;
-        return <button type="button" key={photo.src} className="memory-card" data-position={position} onClick={() => position===0 ? open() : select(index)} tabIndex={position===2?-1:0} aria-hidden={position===2} aria-label={position===0?`Enlarge photo: ${photo.alt}`:`Show photo: ${photo.alt}`}><img src={photo.src} alt={photo.alt} width="960" height="1440" loading="eager" decoding="async" /><span className="memory-card-footer"><span>Deepak &amp; Ayusha</span><Expand size={14} /></span></button>;
+        return <button type="button" key={photo.src} className="memory-card" data-position={position} onClick={() => position===0 ? open() : select(index)} tabIndex={position===2?-1:0} aria-hidden={position===2} aria-label={position===0?`Enlarge photo: ${photo.alt}`:`Show photo: ${photo.alt}`}><img src={photo.src} alt={photo.alt} width="960" height="1440" loading="eager" decoding="async" /><span className="memory-card-footer"><span>Ayusha &amp; Deepak</span><Expand size={14} /></span></button>;
       })}
     </div>
     <div className="memory-caption" aria-live={autoPlay ? "off" : "polite"}>{photos.map((photo,index)=><div key={photo.src} className={index===active?"is-active":""} aria-hidden={index!==active}><h3>{photo.title}</h3><p>{photo.caption}</p></div>)}</div>

@@ -44,7 +44,7 @@ export default function OpeningEnvelope() {
   if (phase === "complete") return null;
 
   return (
-    <section className="invitation-opening" data-phase={phase} aria-label="Open Deepak and Ayusha's wedding invitation">
+    <section className="invitation-opening" data-phase={phase} aria-label="Open Ayusha and Deepak's wedding invitation">
       <div className="opening-stage">
         <div className="opening-kicker"><span lang="hi">॥ शुभ विवाह ॥</span><p>An invitation, made with love</p></div>
         <div className="opening-envelope">
@@ -55,7 +55,7 @@ export default function OpeningEnvelope() {
               <i className="opening-emblem" aria-hidden="true"><b /><em /><b /></i>
               <p>Together with their families</p>
             </div>
-            <h2 className="opening-names"><span>Deepak</span><i>&amp;</i><span>Ayusha</span></h2>
+            <h2 className="opening-names"><span>Ayusha</span><i>&amp;</i><span>Deepak</span></h2>
             <div className="opening-details">
               <small>Request the pleasure of your company<br />as they begin their forever</small>
               <time className="opening-date" dateTime="2026-12-09"><span>December</span><b>09</b><span>2026</span></time>
@@ -64,11 +64,11 @@ export default function OpeningEnvelope() {
           </div>
           <div className="opening-pocket" aria-hidden="true" />
           <div className="opening-flap" aria-hidden="true" />
-          <button className="opening-trigger" type="button" onClick={openInvitation} aria-label="Open Deepak and Ayusha's invitation">
+          <button className="opening-trigger" type="button" onClick={openInvitation} aria-label="Open Ayusha and Deepak's invitation">
             <span>Open invitation</span>
           </button>
         </div>
-        <div className="opening-scroll" aria-hidden="true"><span>Tap the AA seal to open</span><Sparkles size={14} /></div>
+        <div className="opening-scroll" aria-hidden="true"><span>Tap the seal to open</span><Sparkles size={14} /></div>
       </div>
     </section>
   );

@@ -82,7 +82,7 @@ export default function Hero() {
     };
   }, []);
   return (
-    <section ref={root} id="home" className="varmala-story" aria-label="Deepak and Ayusha approach each other and exchange varmala as you scroll">
+    <section ref={root} id="home" className="varmala-story" aria-label="Ayusha and Deepak approach each other and exchange varmala as you scroll">
       <div className="varmala-stage">
         <picture className="ceremony-environment"><source media="(max-aspect-ratio:1/1)" srcSet="/video/ceremony-scroll-mobile-poster.webp"/><img src="/video/ceremony-scroll-desktop-poster.webp" alt="" fetchPriority="high"/></picture>
         <video className="ceremony-video" muted playsInline preload="auto" disablePictureInPicture aria-hidden="true">
@@ -90,7 +90,7 @@ export default function Hero() {
           <source src="/video/ceremony-scroll-desktop.mp4" type="video/mp4" />
         </video>
         <div className="ceremony-light" aria-hidden="true"/><div className="ceremony-exit" aria-hidden="true"/>
-        <header className="ceremony-title"><p lang="hi">॥ सिया राम ॥</p><span className="eyebrow">Together with our families</span><h1>Deepak <span>&amp;</span> Ayusha</h1><p className="ceremony-title-date">09 December 2026 · Greater Noida West</p></header>
+        <header className="ceremony-title"><p lang="hi">॥ सिया राम ॥</p><span className="eyebrow">Together with our families</span><h1>Ayusha <span>&amp;</span> Deepak</h1><p className="ceremony-title-date">09 December 2026 · Greater Noida West</p></header>
         <div className="ceremony-narration"><p data-caption="arrival">Two paths. One beautiful beginning.</p><p data-caption="together">With every step, closer to forever.</p><p data-caption="varmala">Two garlands. A promise for a lifetime.</p></div>
         <div className="ceremony-scroll"><span>Scroll to bring our story to life</span><ArrowDown size={17}/><div><i/></div></div>
         <a className="ceremony-skip" href="#invitation">Read the invitation <span aria-hidden="true">↗</span></a>

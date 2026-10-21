@@ -18,7 +18,7 @@ export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
-    name: `${wedding.groom.fullName} & ${wedding.bride.fullName} — Wedding`,
+    name: `${wedding.bride.fullName} & ${wedding.groom.fullName} — Wedding`,
     startDate: wedding.dateIso,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
@@ -36,10 +36,10 @@ export default function HomePage() {
     },
     image: ["/images/ayusha-deepak-3.jpg"],
     description:
-      "Deepak weds Ayusha — wedding celebrations in Greater Noida West on 8th and 9th December 2026.",
+      "Ayusha weds Deepak — wedding celebrations in Greater Noida West on 8th and 9th December 2026.",
     organizer: {
       "@type": "Person",
-      name: "The families of Deepak and Ayusha",
+      name: "The families of Ayusha and Deepak",
     },
   };
 

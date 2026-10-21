@@ -66,9 +66,9 @@ export default function TempleScene() {
           <img className="hero__flag-banner" src={art + "ram-flag.png"} alt="" />
         </div>
         <h2 className="hero__names">
-          <span className="scene-name">{wedding.groom.name}</span>
-          <span className="scene-weds">weds</span>
           <span className="scene-name">{wedding.bride.name}</span>
+          <span className="scene-weds">weds</span>
+          <span className="scene-name">{wedding.groom.name}</span>
         </h2>
         <div className="hero__invite">
           <div className="invite-ganesh-heading" lang="hi">
@@ -81,15 +81,15 @@ export default function TempleScene() {
             src={art + "cbcf61a7736f01a5.webp"}
             alt="वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥"
           />
-          <p className="invite-hosts">{wedding.groom.sonOf}</p>
+          <p className="invite-hosts">{wedding.bride.daughterOf}</p>
           <p className="invite-request">
-            With the blessings of Lord Ganesha, we joyfully invite you to the wedding of our beloved son
+            With the blessings of Lord Ganesha, we joyfully invite you to the wedding of our beloved daughter
           </p>
-          <p className="invite-name">{wedding.groom.name}</p>
-          <p className="invite-and">with</p>
           <p className="invite-name">{wedding.bride.name}</p>
-          <p className="invite-relation">Beloved daughter of</p>
-          <p className="invite-family">{wedding.bride.daughterOf}</p>
+          <p className="invite-and">with</p>
+          <p className="invite-name">{wedding.groom.name}</p>
+          <p className="invite-relation">Beloved son of</p>
+          <p className="invite-family">{wedding.groom.sonOf}</p>
           <p className="invite-date">9 December 2026 · Greater Noida West</p>
           <p className="invite-events">Your presence completes our celebration</p>
           <p className="invite-story">

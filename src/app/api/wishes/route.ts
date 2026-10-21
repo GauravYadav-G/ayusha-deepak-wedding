@@ -52,8 +52,8 @@ export async function POST(request: Request) {
         body: JSON.stringify({
           Name: name,
           Blessing: message,
-          Occasion: "Deepak & Ayusha Wedding (09 Dec 2026)",
-          _subject: `🌸 New Wedding Blessing from ${name} for Deepak & Ayusha`,
+          Occasion: "Ayusha & Deepak Wedding (09 Dec 2026)",
+          _subject: `🌸 New Wedding Blessing from ${name} for Ayusha & Deepak`,
           _template: "table",
           _captcha: "false",
         }),
