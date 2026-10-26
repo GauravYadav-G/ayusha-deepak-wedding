@@ -36,8 +36,8 @@ export const wedding = {
     {
       id: "home", label: "Haldi · Mehndi · Sangeet", name: "Our Home",
       address: "D-496, Sector 11, Pratap Vihar, Near Golden Public School, Ghaziabad, Uttar Pradesh",
-      mapQuery: "28.6553353,77.411702",
-      mapUrl: "https://maps.app.goo.gl/2kCvxdvsDdoTgj3q9",
+      mapQuery: "28.6526756,77.4133682",
+      mapUrl: "https://www.google.com/maps/place/28%C2%B039'09.6%22N+77%C2%B024'48.1%22E/@28.6526756,77.4107933,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.6526756!4d77.4133682?hl=en&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
     },
     {
       id: "amaatra", label: "Wedding", name: "Amaatra Banquet Gaur City",
