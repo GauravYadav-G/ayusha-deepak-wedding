@@ -6,6 +6,7 @@ import GalleryStack from "@/components/site/GalleryStack";
 import Venue from "@/components/site/Venue";
 import CountdownScene from "@/components/site/CountdownScene";
 import Footer from "@/components/site/Footer";
+import { getSiteUrl, shareMetadata } from "@/lib/site";
 import { wedding } from "@/lib/wedding";
 import MusicToggle from "@/components/site/MusicToggle";
 import StoryMotion from "@/components/site/StoryMotion";
@@ -15,6 +16,7 @@ import ChapterBlend from "@/components/site/ChapterBlend";
 import Wishes from "@/components/site/Wishes";
 
 export default function HomePage() {
+  const siteUrl = getSiteUrl();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -22,6 +24,7 @@ export default function HomePage() {
     startDate: wedding.dateIso,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    url: siteUrl,
     location: {
       "@type": "Place",
       name: wedding.venues[1].name,
@@ -34,9 +37,11 @@ export default function HomePage() {
         addressCountry: "IN",
       },
     },
-    image: ["/images/ayusha-deepak-3.jpg"],
-    description:
-      "Ayusha weds Deepak — wedding celebrations in Greater Noida West on 8th and 9th December 2026.",
+    image: [
+      new URL(shareMetadata.image.url, siteUrl).toString(),
+      new URL("/images/ayusha-deepak-3.jpg", siteUrl).toString(),
+    ],
+    description: shareMetadata.ogDescription,
     organizer: {
       "@type": "Person",
       name: "The families of Ayusha and Deepak",

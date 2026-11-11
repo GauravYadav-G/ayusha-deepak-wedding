@@ -1,27 +1,52 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { getSiteUrl, shareMetadata } from "@/lib/site";
 import "./globals.css";
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
-  ),
-  title: "Ayusha & Deepak | Shubh Vivah — 9 December 2026, Greater Noida West",
-  description:
-    "Ayusha weds Deepak — a divine celebration in Greater Noida West. Celebrations on 8th and 9th December 2026. Browse the schedule, venues and share your blessings.",
+  metadataBase: new URL(siteUrl),
+  title: shareMetadata.pageTitle,
+  description: shareMetadata.description,
   keywords: [
     "wedding invitation",
     "Ayusha weds Deepak",
+    "Ayusha and Deepak wedding",
     "Shubh Vivah",
-    "Greater Noida wedding",
+    "Greater Noida West wedding",
     "Indian wedding website",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Ayusha & Deepak | Shubh Vivah",
-    description:
-      "A divine celebration at Greater Noida West — 9th December 2026. Share your blessing.",
-    images: ["/images/ayusha-deepak-3.jpg"],
+    title: shareMetadata.ogTitle,
+    description: shareMetadata.ogDescription,
+    url: "/",
+    siteName: shareMetadata.siteName,
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: shareMetadata.image.url,
+        width: shareMetadata.image.width,
+        height: shareMetadata.image.height,
+        alt: shareMetadata.image.alt,
+        type: shareMetadata.image.type,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: shareMetadata.ogTitle,
+    description: shareMetadata.ogDescription,
+    images: [
+      {
+        url: shareMetadata.image.url,
+        alt: shareMetadata.image.alt,
+      },
+    ],
   },
 };
 

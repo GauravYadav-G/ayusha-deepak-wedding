@@ -327,8 +327,6 @@ html, body { max-width:100%; overflow-x:clip; }
 .celebrations-garden::after { content:"";position:absolute;inset:60% 0 0;background:linear-gradient(transparent,#f4e6d1); }
 .celebrations-content { position:relative;max-width:1190px;margin:0 auto;padding-top:28px; }
 .celebration-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px; }
-.celebration-track,.celebration-sticky { display:contents; }
-.celebration-dots { display:none; }
 .celebration-card { position:relative;display:flex;flex-direction:column;align-items:center;padding:42px 20px 20px;min-width:0;border:1px solid #cbb58c;border-radius:140px 140px 9px 9px;background:#fff9ef;box-shadow:0 8px 20px #62471f08;text-align:center; }
 .celebration-card::before { content:"";position:absolute;inset:7px;border:1px solid #e6d8bd;border-radius:inherit;pointer-events:none; }
 .celebration-card-wedding { background:#f8f1de;border-color:#9b986e; }
@@ -854,76 +852,35 @@ main > section { width:100%;max-width:none; }
  .family-blessing-copy .script-accent { margin-top:10px;font-size:35px; }
  .family-blessing-copy h2 { font-size:38px; }
  .family-blessing .brass-lamp { left:-1%;bottom:2%;transform:scale(.58); }.family-blessing .brass-lamp:nth-child(2) { right:-1%; }
- .celebration-track {
-  display:block;
-  position:relative;
-  height:250svh;
- }
- .celebration-sticky {
-  display:flex;
-  position:sticky;
-  top:0;
-  height:100svh;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-start;
-  overflow:hidden;
-  width:100vw;
-  margin-left:calc(50% - 50vw);
-  margin-right:calc(50% - 50vw);
- }
+ .celebrations { padding-inline:12px; }
  .celebration-grid {
-  display:flex;
-  flex-direction:row;
-  flex-wrap:nowrap;
-  gap:16px;
-  width:max-content;
-  padding-left:calc((100vw - min(82vw, 320px)) / 2);
-  padding-right:calc((100vw - min(82vw, 320px)) / 2);
-  will-change:transform;
-  overflow:visible;
-  scrollbar-width:none;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px 10px;
+  width:100%;
+  max-width:440px;
+  margin-inline:auto;
  }
- .celebration-grid::-webkit-scrollbar { display:none; }
  .celebration-card {
   box-sizing:border-box;
-  flex:0 0 min(82vw,320px);
-  width:min(82vw,320px);aspect-ratio:auto;min-height:530px;height:530px;
-  padding:102px 57px 128px;
+  width:100%;
+  height:auto;
+  min-height:clamp(286px,79vw,340px);
+  padding:clamp(42px,11.6vw,52px) clamp(20px,6.2vw,30px) clamp(68px,19.5vw,86px);
   background-size:100% 100%;
  }
- .celebration-dots {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-  width:100%;
-  margin-top:16px;
- }
- .celebration-dot {
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:#cbb58c55;
-  transition:all .35s ease;
- }
- .celebration-dot.is-active {
-  width:20px;
-  border-radius:4px;
-  background:#a06c49;
- }
  .celebration-card > * { flex-shrink:0;max-width:100%; }
- .celebration-card .ceremony-hindi { font-size:14px;line-height:1.4; }
- .celebration-card h3 { font-size:30px;line-height:1.15;margin:6px 0 16px; }
- .celebration-card .ceremony-date { gap:10px;padding-top:12px;max-width:100%; }
- .celebration-card .ceremony-date strong { font-size:38px;flex-shrink:0; }
- .celebration-card .ceremony-date span { font-size:10px;letter-spacing:0; }
- .celebration-card .ceremony-time { font-size:14px;line-height:1.5;margin:14px 0 6px; }
- .celebration-card .ceremony-venue { font-size:14px;line-height:1.5;min-height:42px;max-width:100%;margin-bottom:10px;overflow-wrap:break-word; }
- .celebration-card .ceremony-actions { box-sizing:border-box;gap:8px;width:100%;padding:8px 0 0;margin-top:8px; }
- .celebration-card .ceremony-actions a { min-height:44px;font-size:12px; }
- .celebration-card .ceremony-actions a:last-child { min-width:44px;justify-content:center; }
- .celebration-card .ceremony-actions svg { flex-shrink:0; }
+ .celebration-card .ceremony-hindi { font-size:clamp(10px,2.8vw,12px);line-height:1.3; }
+ .celebration-card h3 { font-size:clamp(20px,5.6vw,25px);line-height:1.1;margin:3px 0 9px; }
+ .celebration-card .ceremony-date { gap:6px;padding-top:8px;max-width:100%; }
+ .celebration-card .ceremony-date strong { font-size:clamp(24px,6.8vw,31px);flex-shrink:0; }
+ .celebration-card .ceremony-date span { font-size:clamp(7.5px,2.1vw,9px);line-height:1.45;letter-spacing:.02em; }
+ .celebration-card .ceremony-time { font-size:clamp(10.5px,2.9vw,12px);line-height:1.35;margin:9px 0 3px; }
+ .celebration-card .ceremony-venue { font-size:clamp(11px,3.1vw,12.5px);line-height:1.3;min-height:2.6em;max-width:100%;margin-bottom:6px;overflow-wrap:break-word; }
+ .celebration-card .ceremony-actions { box-sizing:border-box;gap:4px;width:calc(100% - 10px);margin-inline:auto;padding:6px 0 0;margin-top:auto; }
+ .celebration-card .ceremony-actions a { min-height:28px;font-size:clamp(9.5px,2.6vw,11px); }
+ .celebration-card .ceremony-actions a:last-child { min-width:28px;justify-content:center; }
+ .celebration-card .ceremony-actions svg { flex-shrink:0;width:13px;height:13px; }
  .story-venue-grid,.venue-help { width:100%; }
 }
 
