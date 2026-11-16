@@ -932,17 +932,20 @@ html[data-envelope-active="true"] .flower-shower { opacity:0; }
 .venue-intro .venue-palace { position:absolute;inset:0;width:100%;height:100%;max-width:none;margin:0;translate:none;aspect-ratio:auto; }
 .venue-intro .venue-palace picture,.venue-intro .venue-palace picture img { display:block;width:100%;height:100%; }
 .venue-intro .venue-palace picture img { position:absolute;inset:0;object-fit:cover;object-position:center 48%; }
-.venue-intro .venue-palace::after { z-index:2;height:58%;background:linear-gradient(transparent 5%,#3f241b50 68%,#2f1a14a8); }
-.venue-intro .venue-heading { position:absolute;z-index:5;left:50%;bottom:8.5svh;width:min(92%,900px);translate:-50%;margin:0;color:#fff5e7;text-shadow:0 2px 20px #321912; }
-.venue-intro .venue-heading .eyebrow { color:#f2d6a8; }.venue-intro .venue-heading .script-accent { color:#f4cda1; }.venue-intro .venue-heading h2 { color:#fff7e9; }
+.venue-intro .venue-palace::after { z-index:2;height:68%;background:linear-gradient(transparent 0%,rgba(38,18,12,0.28) 20%,rgba(38,18,12,0.68) 55%,rgba(25,9,6,0.92) 100%); }
+.venue-intro .venue-heading { position:absolute;z-index:5;left:50%;bottom:8.5svh;width:min(92%,900px);translate:-50%;margin:0;text-align:center;color:#fff5e7; }
+.venue-intro .venue-heading .eyebrow { display:block;font-weight:700;letter-spacing:.22em;color:#fff5db;text-shadow:0 1px 3px rgba(18,5,2,0.95),0 0 8px rgba(18,5,2,0.9),0 2px 14px rgba(18,5,2,0.85);margin-bottom:6px; }
+.venue-intro .venue-heading .script-accent { color:#ffe6bd;text-shadow:0 1px 3px rgba(18,5,2,0.95),0 0 12px rgba(18,5,2,0.9),0 2px 20px rgba(18,5,2,0.85); }
+.venue-intro .venue-heading h2 { color:#ffffff;text-shadow:0 2px 4px rgba(18,5,2,0.9),0 4px 18px rgba(18,5,2,0.85); }
 .venue-intro .living-lamps { display:none; }
-.venue-discover { position:absolute;z-index:6;right:3%;bottom:4%;font:500 8px/1.5 Gotham,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#f5dfbd; }
+.venue-discover { position:absolute;z-index:6;right:3%;bottom:4%;font:600 8.5px/1.5 Gotham,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#fff2d1;text-shadow:0 1px 3px rgba(18,5,2,0.95),0 0 8px rgba(18,5,2,0.9); }
 .story-venue-grid { padding:clamp(65px,7vw,110px) 24px 0; }
 .venue-help { padding-inline:24px;padding-bottom:70px; }
 
 @media(max-width:700px) {
  .invitation-opening { height:350svh; }
  .opening-stage { min-height:520px; }
+ .opening-kicker { top:max(16px,2.4svh);padding:4px 14px 6px; }.opening-kicker p { font-size:clamp(7.5px,2vw,9px);margin-top:4px; }
  .opening-envelope { width:94vw;aspect-ratio:4/5;transform:translateY(calc(2svh - var(--envelope-exit) * 8svh)) scale(calc(1 - var(--envelope-exit) * .08)); }
  .opening-liner,.opening-card { background-position:center;background-size:auto 100%; }
  .opening-card { inset:9% 7% 7%;transform:translateY(calc(22% - var(--invitation-rise) * 38%)) scale(calc(.95 + var(--invitation-rise) * .05)); }
@@ -957,7 +960,7 @@ html[data-envelope-active="true"] .flower-shower { opacity:0; }
  .venue-intro .venue-palace { width:100%;height:100%;margin:0;translate:none; }
  .venue-intro .venue-palace picture img { object-position:center; }
  .venue-intro .venue-heading { bottom:10svh;width:88%; }.venue-intro .venue-heading h2 { font-size:42px; }
- .venue-intro .venue-heading .script-accent { font-size:38px; }
+ .venue-intro .venue-heading .script-accent { font-size:40px; }
  .venue-discover { right:auto;left:50%;bottom:3%;translate:-50%;white-space:nowrap; }
  .story-venue-grid { padding-inline:18px; }.venue-help { padding-inline:18px;padding-bottom:45px; }
 }
