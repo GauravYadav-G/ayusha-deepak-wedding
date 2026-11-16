@@ -943,7 +943,6 @@ html[data-envelope-active="true"] .flower-shower { opacity:0; }
 @media(max-width:700px) {
  .invitation-opening { height:350svh; }
  .opening-stage { min-height:520px; }
- .opening-kicker { top:max(20px,4svh); }.opening-kicker p { font-size:7px; }
  .opening-envelope { width:94vw;aspect-ratio:4/5;transform:translateY(calc(2svh - var(--envelope-exit) * 8svh)) scale(calc(1 - var(--envelope-exit) * .08)); }
  .opening-liner,.opening-card { background-position:center;background-size:auto 100%; }
  .opening-card { inset:9% 7% 7%;transform:translateY(calc(22% - var(--invitation-rise) * 38%)) scale(calc(.95 + var(--invitation-rise) * .05)); }
@@ -972,8 +971,43 @@ html[data-envelope-active="true"] .flower-shower { opacity:0; }
 /* Full-bleed royal Rajasthani folio: the viewport itself is the envelope. */
 .opening-stage { background:#350809;perspective:1800px; }
 .opening-stage::before { z-index:10;mix-blend-mode:screen;opacity:.22; }
-.opening-kicker { z-index:11;color:#f5d999;text-shadow:0 2px 12px #210000; }
-.opening-kicker span,.opening-kicker p { color:inherit; }
+.opening-kicker {
+  position: absolute;
+  top: max(18px, 2.8svh);
+  left: 50%;
+  translate: -50%;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity .3s ease;
+  z-index: 11;
+  width: auto;
+  max-width: 90%;
+  padding: 6px 20px 8px;
+  background: radial-gradient(ellipse at center, rgba(28, 3, 5, 0.78) 0%, rgba(38, 5, 8, 0.48) 65%, transparent 100%);
+  border-radius: 24px;
+}
+.opening-kicker span {
+  display: block;
+  font: 700 clamp(15px, 1.35vw, 20px)/1.35 var(--font-hindi);
+  letter-spacing: 0.05em;
+  color: #fff9ed;
+  text-shadow:
+    0 1px 3px #120102,
+    0 0 5px #120102,
+    0 0 12px #120102,
+    0 2px 16px rgba(18, 1, 2, 0.95);
+}
+.opening-kicker p {
+  margin-top: 5px;
+  font: 700 clamp(8px, 0.75vw, 10px)/1.4 Gotham, sans-serif;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: #fde5a8;
+  text-shadow:
+    0 1px 2px #120102,
+    0 0 4px #120102,
+    0 0 10px #120102;
+}
 .opening-envelope {
   width:100vw;height:100svh;aspect-ratio:auto;max-width:none;
   filter:none;transform:none;opacity:calc(1 - var(--envelope-exit));
@@ -1066,6 +1100,7 @@ html[data-invitation-hold="true"] .opening-card::after { content:"A moment to ta
 }
 
 @media(max-width:700px) {
+ .opening-kicker { top:max(16px,2.4svh); }
  .opening-envelope { width:100vw;height:100svh;aspect-ratio:auto; }
  .opening-liner { background-image:url('/artwork/envelope-palace-mobile-v5.webp');background-size:cover;background-position:center; }
  .opening-card { background-image:url('/artwork/envelope-palace-mobile-v5.webp');background-size:cover;background-position:center; }
